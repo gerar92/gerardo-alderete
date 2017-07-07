@@ -5,18 +5,22 @@
  */
 package threads1;
 
-/**
- *
- * @author T-
- */
+import java.util.*;
+
 public class TareaReloj extends Thread{
 
     @Override
     public void run() {
         int i = 0;
         while (true) {           
+            Calendar cal = Calendar.getInstance();
+            //Aqui vamos 
+            int hora = cal.get(Calendar.HOUR_OF_DAY);
+            int minutos = cal.get(Calendar.MINUTE);
+            int segundos = cal.get(Calendar.SECOND);
             
-            System.out.println("Me trabo!! "  + i++);
+            System.out.println("La hora es " + hora + ":" + minutos + ":" + segundos);
+            
             
             try {
                 Thread.sleep(1000);
